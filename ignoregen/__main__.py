@@ -25,12 +25,14 @@ def _get_names_to_ignore(search_dir):
     file_names = set()
     for line in git.status("--ignored").splitlines():
         temp = _remove_prefix("#", line)
-        if temp is None: continue
+        if temp is None:
+            temp = _remove_prefix("\t", line)
+            if temp is None: continue
 
         temp = temp.strip()
         if len(temp) == 0: continue
 
-        name = temp.split(os.sep)[0]
+        name = temp.split("/")[0]
         path = make_path(search_dir, name)
         if os.path.isdir(path):
             dir_names.add(name)
