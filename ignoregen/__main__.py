@@ -37,10 +37,10 @@ def _get_names_to_ignore(search_dir, truncate=None):
 
         name = "/".join(parts)
         path = make_path(search_dir, name)
+        if os.path.isfile(path) or os.path.islink(path):
+            file_names.add(name)
         if os.path.isdir(path):
             dir_names.add(name)
-        elif os.path.isfile(path):
-            file_names.add(name)
 
     return dir_names, file_names
 
@@ -56,7 +56,7 @@ def _do_gen(config, args):
         print("/{}/".format(n))
     print()
 
-    print("# Files")
+    print("# Files and symlinks")
     for n in sorted(file_names):
         print("/{}".format(n))
 
