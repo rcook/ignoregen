@@ -1,5 +1,5 @@
 ##################################################
-# Copyright (C) 2017, All rights reserved.
+# Copyright (C) 2018, All rights reserved.
 ##################################################
 
 class Config(object):
