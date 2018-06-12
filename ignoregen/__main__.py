@@ -74,7 +74,7 @@ def _main(argv=None):
 
     gen_parser = subparsers.add_parser("gen", help="Generate Git ignore rules")
     gen_parser.set_defaults(func=_do_gen)
-    gen_parser.add_argument("--truncate", "-t", type=int, default=None, help="Truncate paths to specified level")
+    gen_parser.add_argument("--truncate", "-t", type=int, default=1, help="Truncate paths to specified level")
 
     args = parser.parse_args(argv)
     args.func(config, args)
