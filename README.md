@@ -7,8 +7,16 @@ Python tool with virtual environment wrappers
 
 ## Typical usage
 
+From a Linux/Unix-style shell:
+
 ```
 ignoregen gen > ~/.git/info/exclude
+```
+
+From PowerShell
+
+```
+ignoregen gen | Out-File -Encoding ASCII -FilePath ~\.git\info\exclude
 ```
 
 ## Clone repository
