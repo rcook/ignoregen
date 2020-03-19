@@ -1,5 +1,5 @@
 ##################################################
-# Copyright (C) 2018, All rights reserved.
+# Copyright (C) 2017-2020, All rights reserved.
 ##################################################
 
 __project_name__ = "ignoregen"
