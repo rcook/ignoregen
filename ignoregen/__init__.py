@@ -4,4 +4,4 @@
 
 __project_name__ = "ignoregen"
 __version__ = "0.4"
-__description__ = "Description of package"
+__description__ = "Generate Git ignore rules"
