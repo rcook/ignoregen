@@ -35,20 +35,11 @@ Various package properties are defined in `ignoregen/__init__py`:
 
 When publishing a new build of the package, ensure that `__version__` is incremented as appropriate.
 
-## Building and publishing
-
-Create distribution:
+## Build and publish
 
 ```
 cd /path/to/ignoregen
 python setup.py sdist
-```
-
-Publish distribution:
-
-```
-cd /path/to/ignoregen
-pip install --user twine
 twine upload dist/*
 ```
 
