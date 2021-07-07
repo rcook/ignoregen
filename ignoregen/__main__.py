@@ -24,7 +24,7 @@ def _get_names_to_ignore(search_dir, truncate=None):
     git = Git(search_dir)
     dir_names = set()
     file_names = set()
-    for line in git.status("--ignored").splitlines():
+    for line in git.status("--ignored").decode("utf-8").splitlines():
         temp = _remove_prefix("#", line)
         if temp is None:
             temp = _remove_prefix("\t", line)
